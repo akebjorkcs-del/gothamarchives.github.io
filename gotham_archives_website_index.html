@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gotham Archives — Timeless essentials at honest prices</title>
+  <meta name="description" content="Gotham Archives delivers timeless, high-quality clothing at honest prices. Hoodies, T-shirts, and Zip Hoodies for teens & young adults.">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#F5F5F5;
+      --panel:#FFFFFF;
+      --text:#0A0A0A;
+      --muted:#6b6b6b;
+      --accent:#C6A667; /* optional gold */
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:var(--text); margin:0; display:flex; justify-content:center}
+    .wrap{max-width:var(--maxw); width:100%; padding:28px}
+
+    /* Header */
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .logo{display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--text)}
+    .logo img{height:48px}
+    .brand{font-family:'Cormorant Garamond', serif; font-weight:700; letter-spacing:4px; font-size:20px}
+    nav a{margin-left:18px; color:var(--muted); text-decoration:none; font-weight:600}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg, rgba(0,0,0,0.02), transparent); padding:44px; border-radius:14px; display:grid; grid-template-columns:1fr 380px; gap:28px; align-items:center}
+    .hero h1{font-family:'Cormorant Garamond', serif; font-size:44px; margin:0 0 12px; letter-spacing:2px}
+    .hero p.lead{margin:0 0 18px; color:var(--muted); font-size:16px}
+    .cta{display:inline-block; padding:12px 18px; background:var(--text); color:white; text-decoration:none; border-radius:10px; font-weight:700}
+
+    /* Panel (signup) */
+    .panel{background:var(--panel); padding:22px; border-radius:10px; box-shadow:0 8px 24px rgba(10,10,10,0.04)}
+    .panel h3{margin:0 0 8px; font-size:18px}
+    .panel p{margin:0 0 14px; color:var(--muted)}
+    .field{width:100%; padding:10px 12px; margin-bottom:10px; border:1px solid #e6e6e6; border-radius:8px}
+    .secondary{background:none; border:1px solid var(--muted); color:var(--muted)}
+
+    /* Features */
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:22px}
+    .card{background:var(--panel); padding:18px; border-radius:10px; text-align:center; box-shadow:0 6px 18px rgba(10,10,10,0.03)}
+    .card h4{margin:0 0 8px}
+    .card p{margin:0; color:var(--muted)}
+
+    /* Products preview */
+    .products{display:flex; gap:12px; margin-top:18px}
+    .prod{flex:1; min-height:160px; background:linear-gradient(180deg,#fff,#f8f8f8); border-radius:10px; display:flex; align-items:flex-end; padding:12px}
+    .prod .meta{font-size:14px}
+
+    footer{margin-top:28px; color:var(--muted); font-size:14px; display:flex; justify-content:space-between; align-items:center}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:repeat(1,1fr)}
+      nav{display:none}
+      .logo img{height:40px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <!-- Replace images/logo.png with your actual logo file in the Website folder -->
+      <a class="logo" href="#">
+        <img src="images/logo.png" alt="Gotham Archives logo">
+        <div class="brand">GOTHAM ARCHIVES</div>
+      </a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#offer">Offer</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div>
+          <h1>Timeless essentials. Honest prices.</h1>
+          <p class="lead">High-quality hoodies, T‑shirts, and zip hoodies designed to look premium without the premium markup. Clean silhouettes. Built to last.</p>
+          <p><a class="cta" href="#signup">Join the waitlist</a></p>
+
+          <div class="grid" aria-hidden="true">
+            <div class="card">
+              <h4>Timeless</h4>
+              <p>Designs that never go out of style.</p>
+            </div>
+            <div class="card">
+              <h4>Honest Prices</h4>
+              <p>No hidden markups — simple pricing.</p>
+            </div>
+            <div class="card">
+              <h4>Quality</h4>
+              <p>Durable fabrics and clean construction.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="panel" id="signup">
+          <h3>Join the waitlist</h3>
+          <p>Be first to hear about drops, exclusive early access, and limited runs.</p>
+
+          <!--
+            Replace the form action below with your Mailchimp / ConvertKit form action URL.
+            Steps to get your form action (Mailchimp):
+              1. Create an Audience and Signup Form in Mailchimp.
+              2. In Embedded Forms, copy the <form> action URL.
+              3. Paste it into the 'action' attribute below and remove the comment markers.
+
+            For testing: the form currently uses a simple mailto fallback via JS.
+          -->
+
+          <form id="waitlist-form" action="#" method="POST" onsubmit="handleForm(event)">
+            <input class="field" name="name" type="text" placeholder="Full name" required>
+            <input class="field" name="email" type="email" placeholder="Email address" required>
+            <button class="cta" type="submit">Join</button>
+            <button type="button" class="field secondary" onclick="location.href='mailto:hello@gothamarchives.com?subject=Waitlist'">Email us instead</button>
+          </form>
+
+          <p style="margin-top:12px; font-size:13px; color:var(--muted)">No spam. Unsubscribe anytime.</p>
+        </aside>
+      </section>
+
+      <section id="about" style="margin-top:26px">
+        <h2 style="font-family:'Cormorant Garamond', serif; margin:0 0 8px">Our story</h2>
+        <p style="color:var(--muted); margin:0">We started Gotham Archives to solve a simple problem: high-quality essentials cost too much. We make core pieces that look premium and fit into everyday life — without the premium price tag.</p>
+
+        <div class="products">
+          <div class="prod"><div class="meta">Classic Hoodie<br><strong>$TBA</strong></div></div>
+          <div class="prod"><div class="meta">Signature T‑Shirt<br><strong>$TBA</strong></div></div>
+          <div class="prod"><div class="meta">Zip Hoodie<br><strong>$TBA</strong></div></div>
+        </div>
+      </section>
+
+      <section id="offer" style="margin-top:22px">
+        <h3 style="margin:0 0 8px">What we offer</h3>
+        <ul style="color:var(--muted)">
+          <li>High-quality materials and simple designs</li>
+          <li>Limited runs — each drop is curated</li>
+          <li>Transparent pricing</li>
+        </ul>
+      </section>
+
+      <section id="contact" style="margin-top:22px">
+        <h3 style="margin:0 0 8px">Contact</h3>
+        <p style="margin:0; color:var(--muted)">Email: <a href="mailto:hello@gothamarchives.com">hello@gothamarchives.com</a></p>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© Gotham Archives</div>
+      <div style="opacity:0.8">Built with care · <a href="https://github.com/gothamarchives/gothamarchives.github.io" target="_blank" rel="noreferrer">Source</a></div>
+    </footer>
+
+  </div>
+
+  <script>
+    function handleForm(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = encodeURIComponent(f.name.value);
+      const email = encodeURIComponent(f.email.value);
+      // Simple fallback: open mail client with prefilled content. Replace with real form action for production.
+      const subject = encodeURIComponent('Gotham Archives waitlist');
+      const body = encodeURIComponent('Name: ' + decodeURIComponent(name) + '\nEmail: ' + decodeURIComponent(email));
+      window.location.href = `mailto:hello@gothamarchives.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+
+  <!--
+    DEPLOYMENT INSTRUCTIONS (copy into your repo README or follow below):
+
+    1) Create a GitHub repository named: gothamarchives.github.io
+    2) Add this file as index.html in the repo root.
+    3) Create a folder images/ and upload your logo as images/logo.png (transparent PNG). Also include alternate sizes if you have them.
+    4) Push to GitHub. GitHub Pages will automatically serve https://gothamarchives.github.io
+
+    Basic git commands (local):
+      git init
+      git add .
+      git commit -m "Initial Gotham Archives site"
+      git remote add origin git@github.com:YOURUSER/gothamarchives.github.io.git
+      git branch -M main
+      git push -u origin main
+
+    5) Replace the form action with your Mailchimp / ConvertKit embed form action for real signups.
+    6) To use a custom domain later, add CNAME and configure DNS. For now, the GitHub subdomain is free and instant.
+
+    NOTES & NEXT STEPS:
+    - Replace placeholder product prices and images with real photography before launch.
+    - Add analytics (GA4) by inserting the tracking snippet in the <head>.
+    - To collect email in a scalable way, set up a Mailchimp or ConvertKit audience and paste their embed code into the signup panel.
+    - Do NOT use any Batman or DC imagery. Only use your original Gotham Archives wordmark.
+  -->
+</body>
+</html>
