@@ -117,12 +117,26 @@
             For testing: the form currently uses a simple mailto fallback via JS.
           -->
 
-          <form id="waitlist-form" action="#" method="POST" onsubmit="handleForm(event)">
-            <input class="field" name="name" type="text" placeholder="Full name" required>
-            <input class="field" name="email" type="email" placeholder="Email address" required>
-            <button class="cta" type="submit">Join</button>
-            <button type="button" class="field secondary" onclick="location.href='mailto:hello@gothamarchives.com?subject=Waitlist'">Email us instead</button>
-          </form>
+        <!-- Start Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+  <form action="https://YOURUSERNAME.usX.list-manage.com/subscribe/post?u=YOUR_U_ID&amp;id=YOUR_LIST_ID" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    
+    <h3>Join the Gotham Archives Waitlist</h3>
+    <p>Be the first to know when our timeless, affordable clothing drops.</p>
+    
+    <div class="mc-field-group">
+      <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+      <input type="email" value="" name="EMAIL" class="required email field" id="mce-EMAIL" required>
+    </div>
+    
+    <div class="clear">
+      <input type="submit" value="Join Waitlist" name="subscribe" id="mc-embedded-subscribe" class="cta">
+    </div>
+    
+  </form>
+</div>
+<!--End mc_embed_signup-->
+
 
           <p style="margin-top:12px; font-size:13px; color:var(--muted)">No spam. Unsubscribe anytime.</p>
         </aside>
